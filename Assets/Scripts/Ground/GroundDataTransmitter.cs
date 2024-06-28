@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class GroundDataTransmitter : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
+  [SerializeField] private GroundFallController _groundFallController;
 
-    void Update()
-    {
-        
-    }
+  public void SetGroundRigidbodyValues()
+  {
+    StartCoroutine(_groundFallController.SetRigidbodyValues());
+  }
 }
